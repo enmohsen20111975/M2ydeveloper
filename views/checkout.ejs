@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title><%= title %></title>
+    <meta name="title" content="<%= title %>">
+    <meta name="description" content="Processing your payment securely via Paymob">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="Secure payment processing">
+    
+    <!-- Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .payment-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .payment-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .payment-header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .payment-header p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .payment-body {
+            padding: 30px;
+        }
+        
+        .order-summary {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .order-summary h3 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        
+        .summary-row.total {
+            border-top: 2px solid #e9ecef;
+            padding-top: 12px;
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #1a73e8;
+        }
+        
+        .iframe-wrapper {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .payment-footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .payment-footer p {
+            font-size: 13px;
+            color: #6c757d;
+        }
+        
+        .secure-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            color: #28a745;
+            font-size: 12px;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(40, 167, 69, 0.3);
+            border-radius: 50%;
+            border-top-color: #28a745;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-header">
+            <h1>🔐 Payment Gateway</h1>
+            <p>Secure payment powered by Paymob</p>
+        </div>
+        
+        <div class="payment-body">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Plan:</span>
+                    <span><strong><%= plan %></strong></span>
+                </div>
+                <div class="summary-row">
+                    <span>Source:</span>
+                    <span><%= source %></span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span><%= amount %> EGP</span>
+                </div>
+            </div>
+            
+            <iframe
+                class="iframe-wrapper"
+                src="<%= iframeUrl %>"
+                title="Paymob Payment Form"
+                allowpaymentrequest
+            ></iframe>
+        </div>
+        
+        <div class="payment-footer">
+            <p>
+                <div class="spinner"></div> Processing your payment...
+            </p>
+            <div class="secure-badge">
+                🔒 SSL Encrypted | PCI DSS Compliant
+            </div>
+        </div>
+    </div>
+</body>
+</html>

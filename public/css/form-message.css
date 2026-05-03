@@ -1,0 +1,24 @@
+/* ================================
+   Form Message Styles
+   ================================ */
+
+.form-message {
+    display: none;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-md);
+    font-weight: 600;
+    animation: fadeInUp 0.3s ease;
+}
+
+.form-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 2px solid #10b981;
+}
+
+.form-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #ef4444;
+}
