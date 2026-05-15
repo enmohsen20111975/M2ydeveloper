@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - M2Y.net</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #111827;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --font-primary: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Tajawal', var(--font-primary);
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --transition-base: 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-primary); color: var(--text-primary); background-color: var(--bg-primary); line-height: 1.7; direction: rtl; }
+        /* Typography */
+        h1 { font-family: var(--font-heading); font-weight: 800; line-height: 1.3; }
+        h2 { font-family: var(--font-heading); font-weight: 700; line-height: 1.35; }
+        h3 { font-family: var(--font-heading); font-weight: 700; }
+        h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; }
+        a { color: var(--primary-color); text-decoration: none; transition: var(--transition-base); }
+        a:hover { color: var(--primary-dark); }
+        /* Page Header / Hero */
+        .policy-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); color: white; padding: var(--spacing-2xl) 0; text-align: center; position: relative; overflow: hidden; }
+        .policy-hero .policy-hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        .policy-hero .policy-title { font-size: 2.75rem; margin-bottom: var(--spacing-sm); }
+        .policy-hero .policy-subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: var(--spacing-xs); }
+        .policy-hero .policy-date { font-size: 0.9375rem; opacity: 0.85; }
+        /* Container */
+        .container { max-width: 900px; margin: 0 auto; padding: 0 var(--spacing-md); }
+        /* Content */
+        .policy-content { padding: var(--spacing-2xl) 0; }
+        .policy-content .policy-section { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: var(--spacing-lg) var(--spacing-xl); margin-bottom: var(--spacing-lg); border: 1px solid var(--border-color); }
+        .policy-content .policy-section h2 { font-size: 1.6rem; color: var(--primary-color); margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-xs); border-bottom: 2px solid var(--primary-light); }
+        .policy-content .policy-section h3 { font-size: 1.15rem; margin: var(--spacing-md) 0 var(--spacing-xs); color: var(--text-primary); }
+        .policy-content .policy-section p { color: var(--text-secondary); margin-bottom: var(--spacing-sm); line-height: 1.9; }
+        .policy-content .policy-section ul, .policy-content .policy-section ol { list-style: disc; padding-right: var(--spacing-lg); margin-bottom: var(--spacing-sm); }
+        .policy-content .policy-section ul li, .policy-content .policy-section ol li { color: var(--text-secondary); margin-bottom: 0.4rem; line-height: 1.8; }
+        .policy-content .policy-section ol { list-style: decimal; }
+        /* Table of Contents */
+        .policy-toc { background: white; border-radius: var(--radius-lg); padding: var(--spacing-lg) var(--spacing-xl); margin-bottom: var(--spacing-lg); border: 1px solid var(--border-color); }
+        .policy-toc h2 { font-size: 1.4rem; color: var(--primary-color); margin-bottom: var(--spacing-sm); }
+        .policy-toc ul { list-style: none; padding: 0; }
+        .policy-toc ul li { margin-bottom: 0.5rem; }
+        .policy-toc ul li a { color: var(--text-secondary); font-weight: 500; }
+        .policy-toc ul li a:hover { color: var(--primary-color); padding-right: 0.5rem; }
+        /* Contact Box */
+        .contact-box { background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); border-radius: var(--radius-lg); padding: var(--spacing-xl); color: white; text-align: center; margin-top: var(--spacing-xl); }
+        .contact-box h2 { font-size: 1.75rem; margin-bottom: var(--spacing-md); }
+        .contact-box p { opacity: 0.95; margin-bottom: var(--spacing-md); line-height: 1.8; }
+        .contact-box a { color: white; font-weight: 700; border-bottom: 2px solid rgba(255,255,255,0.5); }
+        .contact-box a:hover { border-color: white; }
+        /* Footer */
+        .policy-footer { background: var(--bg-dark); color: rgba(255,255,255,0.7); text-align: center; padding: var(--spacing-lg) 0; font-size: 0.875rem; }
+        .policy-footer p { margin-bottom: 0.25rem; }
+        .policy-footer a { color: rgba(255,255,255,0.85); }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .policy-hero .policy-title { font-size: 2rem; }
+            .policy-content .policy-section { padding: var(--spacing-md); }
+            .policy-content .policy-section h2 { font-size: 1.35rem; }
+            .policy-toc { padding: var(--spacing-md); }
+            .contact-box { padding: var(--spacing-md); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="policy-hero">
+        <div class="policy-hero-content">
+            <h1 class="policy-title">سياسة الخصوصية</h1>
+            <p class="policy-subtitle">M2Y.net</p>
+            <p class="policy-date">تاريخ السريان: 15 مايو 2026</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="policy-content">
+
+            <!-- Table of Contents -->
+            <nav class="policy-toc">
+                <h2>📋 محتويات السياسة</h2>
+                <ul>
+                    <li><a href="#information-collected">المعلومات التي نجمعها</a></li>
+                    <li><a href="#how-we-use">كيفية استخدام المعلومات</a></li>
+                    <li><a href="#sharing">مشاركة المعلومات</a></li>
+                    <li><a href="#data-security">أمان البيانات</a></li>
+                    <li><a href="#your-rights">حقوقك</a></li>
+                    <li><a href="#cookies">ملفات تعريف الارتباط</a></li>
+                    <li><a href="#modifications">التعديلات على السياسة</a></li>
+                    <li><a href="#contact-us">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <!-- Section 1 -->
+            <section class="policy-section" id="information-collected">
+                <h2>المعلومات التي نجمعها</h2>
+                <p>
+                    نحن في M2Y.net نحترم خصوصيتك ونلتزم بحماية جميع البيانات الشخصية التي تقدمها لنا. نحن نقوم بجمع المعلومات التالية:
+                </p>
+                <h3>المعلومات المقدمة مباشرة</h3>
+                <ul>
+                    <li><strong>الاسم الكامل</strong> — عند التسجيل أو التواصل معنا.</li>
+                    <li><strong>البريد الإلكتروني</strong> — لاستلام التحديثات والرد على استفساراتك.</li>
+                    <li><strong>رقم الهاتف</strong> — عند الحاجة للتواصل المباشر.</li>
+                    <li><strong>بيانات الدفع</strong> — تُحمَّل عبر بوابات دفع معتمدة ومشفّرة، ولا نخزن أي بيانات بنكية على خوادمنا.</li>
+                    <li><strong>محتوى الرسائل والنماذج</strong> — مثل النماذج المرفقة أو رسائل الدعم الفني.</li>
+                </ul>
+                <h3>المعلومات التي يتم جمعها تلقائياً</h3>
+                <ul>
+                    <li><strong>نوع المتصفح ونظام التشغيل</strong> — لتحسين تجربة المستخدم.</li>
+                    <li><strong>عنوان IP</strong> — لأغراض أمنية وتحليلية.</li>
+                    <li><strong>سجلات الزيارات</strong> — تشمل الصفحات التي زرتها، مدة الزيارة، ووقت الوصول.</li>
+                    <li><strong>ملفات تعريف الارتباط (Cookies)</strong> — مسبوَّبة في قسم خاص.</li>
+                </ul>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="policy-section" id="how-we-use">
+                <h2>كيفية استخدام المعلومات</h2>
+                <p>
+                    نستخدم المعلومات التي نجمعها لتحقيق الأغراض التالية:
+                </p>
+                <ul>
+                    <li>توفير وتحسين خدماتنا ومنصاتنا.</li>
+                    <li>معالجة طلبات الدفع وإدارة الاشتراكات.</li>
+                    <li>تقديم الدعم الفني والرد على الاستفسارات.</li>
+                    <li>إرسال تحديثات مهمة حول خدماتنا (لا نرسل إعلانات تجارية غير مرغوبة).</li>
+                    <li>مراقبة وتحليل أداء المنصة لاكتشاف الأخطاء وتحسينها.</li>
+                    <li>الامتثال للالتزامات القانونية والتنظيمية.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="policy-section" id="sharing">
+                <h2>مشاركة المعلومات</h2>
+                <p>
+                    نحن لا نبيع أو نؤجر بياناتك لأي طرف ثالث. قد نشارك المعلومات فقط في الحالات التالية:
+                </p>
+                <ul>
+                    <li><strong>مزودو الخدمة</strong> — مثل شركات الاستضافة وبوابات الدفع، وتقتصر معلوماتهم على ما تحتاجه لأداء خدماتهم فقط.</li>
+                    <li><strong>المطالبات القانونية</strong> — إذا طُلب منا الكشف عن المعلومات بموجب أمر قضائي أو قانون ساري.</li>
+                    <li><strong>حماية حقوقنا</strong> — لحماية حقوق أو ممتلكات M2Y.net أو مستخدميها الآخرين.</li>
+                    <li><strong>بموافقتك</strong> — في أي حالة أخرى سنطلب موافقتك الصريحة قبل المشاركة.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="policy-section" id="data-security">
+                <h2>أمان البيانات</h2>
+                <p>
+                    نتخذ جميع التدابير المعقولة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفصاح أو التدمير. تشمل التدابير المطبقة:
+                </p>
+                <ul>
+                    <li>تشفير البيانات عند النقل (HTTPS / TLS).</li>
+                    <li>تخزين كلمات المرور بشكل مشفر (Hashing).</li>
+                    <li>قيود الوصول الداخلية على البيانات الحساسة.</li>
+                    <li>مراقبة مستمرة لأي نشاط مشبوه على المنصة.</li>
+                </ul>
+                <p>
+                    مع ذلك، لا يوجد نظام أمني مطلق بنسبة 100%، وننصحك أيضًا بحماية بياناتك الشخصية وعدم مشاركة كلمات المرور مع أي شخص.
+                </p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="policy-section" id="your-rights">
+                <h2>حقوقك</h2>
+                <p>
+                    لديك الحق في التصرف بالبيانات الشخصية التي جمعناها عنك، بما في ذلك:
+                </p>
+                <ul>
+                    <li><strong>حق الاستعلام</strong> — يمكنك طلب نسخة من بياناتك المحفوظة.</li>
+                    <li><strong>حق التصحيح</strong> — يمكنك طلب تصحيح أي بيانات غير دقيقة.</li>
+                    <li><strong>حق الحذف</strong> — يمكنك طلب حذف حسابك وبياناتك من منصاتنا.</li>
+                    <li><strong>حق الاعتراض</strong> — يمكنك الاعتراض على معالجة بياناتك في حالات معينة.</li>
+                    <li><strong>حق الإلغاء</strong> — يمكنك إلغاء الاشتراك في أي وقت من خلال إعدادات الحساب أو التواصل معنا.</li>
+                </ul>
+                <p>
+                    لاستخدام أي من هذه الحقوق، يرجى التواصل معنا عبر البيانات الواردة أدناه.
+                </p>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="policy-section" id="cookies">
+                <h2>ملفات تعريف الارتباط (Cookies)</h2>
+                <p>
+                    نستخدم ملفات تعريف الارتباط لتحسين تجربتك على منصتنا، بما في ذلك:
+                </p>
+                <ul>
+                    <li><strong>ملفات تعريف الارتباط الأساسية</strong> — ضرورية لعمل الموقع بشكل صحيح.</li>
+                    <li><strong>ملفات تحليل الأداء</strong> — تساعدنا على فهم كيفية استخدام الموقع وتحسينه.</li>
+                    <li><strong>ملفات دائمة</strong> — تُحفظ على جهازك لفترة محددة لاسترجاع إعداداتك.</li>
+                </ul>
+                <p>
+                    يمكنك إدارة أو حذف ملفات تعريف الارتباط من خلال إعدادات متصفحك في أي وقت.
+                </p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="policy-section" id="modifications">
+                <h2>التعديلات على السياسة</h2>
+                <p>
+                    نحتفظ بالحق في تعديل أو تحديث هذه السياسة في أي وقت وفقًا للتغييرات في خدماتنا أو المتطلبات القانونية. عند أي تعديل جوهري:
+                </p>
+                <ul>
+                    <li>سنقوم بتحديث تاريخ السريان في أعلى هذه الصفحة.</li>
+                    <li>سنقوم بنشر إشعار على المنصة الرئيسية عند الضرورة.</li>
+                </ul>
+                <p>
+                    نوصيك بمراجعة هذه السياسة بشكل دوري للاطلاع على أي تحديثات. استمرار استخدامك للمنصة بعد التعديلات يعني موافقتك على السياسة المعدلة.
+                </p>
+            </section>
+
+            <!-- Section 8 -->
+            <div id="contact-us">
+                <div class="contact-box">
+                    <h2>📬 اتصل بنا</h2>
+                    <p>
+                        إذا كانت لديك أي أسئلة أو استفسارات حول سياسة الخصوصية هذه، أو ترغب في ممارسة أي من حقوقك، فلا تتردد في التواصل معنا:
+                    </p>
+                    <p>
+                        📧 البريد الإلكتروني: <a href="mailto:support@m2y.net">support@m2y.net</a>
+                    </p>
+                    <p>
+                        🌐 الموقع الإلكتروني: <a href="#">www.m2y.net</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="policy-footer">
+        <div class="container">
+            <p>© 2026 M2Y.net — جميع الحقوق محفوظة.</p>
+            <p><a href="#">شروط الاستخدام</a> | <a href="#">سياسة الخصوصية</a></p>
+        </div>
+    </footer>
+</body>
+</html>
